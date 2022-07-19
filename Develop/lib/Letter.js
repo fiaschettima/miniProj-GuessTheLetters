@@ -1,6 +1,6 @@
 class Letter {
   constructor(letter){
-    this.letter = letter;
+    this.char = letter;
     if(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(letter)){
       this.visible = true;
     }else{
@@ -15,18 +15,18 @@ class Letter {
     if(!this.visible){
       return '_';
     }else{
-      return this.letter;
+      return this.char;
     }
   }
   guess(input){
-    if(this.letter === input){
-      // this.visible = true;
+    if(this.char === input){
+      this.visible = true;
       return true;
     }
     return false;
   }
   getSolution(){
-    return this.letter;
+    return this.char;
   }
 }
 
